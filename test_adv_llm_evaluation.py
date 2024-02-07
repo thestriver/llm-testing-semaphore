@@ -10,7 +10,7 @@ def chat_openai_llm():
 # Parametrized tests with expected outcomes and failure handling
 @pytest.mark.parametrize("input_text, prediction, reference, criteria, expected_score", [
     # This case is expected to fail the conciseness criteria due to verbosity
-    ("What's 2+2?", "Of course, that's 4. A simple mathematical fact.", "4", "conciseness", 1),
+    ("What's 2+2?", "Of course, that's 4. A simple mathematical fact.", "4", "conciseness", 0),
     # This case is expected to pass the correctness criteria
     ("What is the capital of the US?", "The capital of the US is Washington, D.C.", "Washington, D.C.", "correctness", 1),
     # Add more test cases as needed
